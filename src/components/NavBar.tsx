@@ -1,7 +1,7 @@
 export default function Navbar() {
     return (
-        <div className="flex justify-center">
-            <nav className="flex items-center justify-between p-4 mt-4 w-1/2">
+        <div className="sticky top-0 z-50 backdrop-blur-sm p-4">
+            <nav className="flex items-center justify-between p-4 w-1/2 mx-auto">
                 <div>
                     <a href="/">
                         <img src="/path-to-your-logo.png" alt="Logo" className="h-8" />
