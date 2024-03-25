@@ -1,0 +1,96 @@
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.circle-container {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    animation: spin 8s linear infinite, fadeIn 3s ease-in-out;
+}
+
+.circle-container:hover {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.circle-container:hover .blue-dot {
+    background-color: var(--secondary);
+    box-shadow: 0 0 10px var(--secondary), 0 0 5px var(--secondary);
+}
+
+.circle-container:hover .white-circle.outer {
+    border: 1px solid black;
+    box-shadow: 0 0 10px var(--secondary), 0 0 5px var(--secondary);
+    animation: glow 1s infinite;
+}
+
+.circle-container:hover .white-circle {
+    border: 1px solid black;
+    box-shadow: inset 0 0 10px var(--secondary), inset 0 0 5px var(--secondary);
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px var(--secondary), 0 0 5px var(--secondary); }
+    50% { box-shadow: 0 0 20px var(--secondary), 0 0 15px var(--secondary); }
+    100% { box-shadow: 0 0 10px var(--secondary), 0 0 5px var(--secondary); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.circle-container.no-spin {
+    animation: none;
+}
+
+.blue-dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--blue);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 3s ease-in-out;
+}
+
+.white-circle {
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    border: 1px solid var(--secondary);
+    border-radius: 50%;
+    top: 12.5%;
+    left: 12.5%;
+}
+
+.white-circle.outer {
+    width: 125%;
+    height: 125%;
+    top: -12.5%;
+    left: -12.5%;
+}
+
+#circlePath {
+    fill: none;
+    stroke: none;
+}
+
+.circle-text {
+    fill: var(--blue);
+    font-family: 'Rubik Doodle Shadow', sans-serif;
+    font-weight: 900;
+    font-size: .8em;
+    letter-spacing: 1.1px;
+}

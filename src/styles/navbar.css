@@ -1,6 +1,11 @@
 .navbar {
-    font-family: 'Bubbler One', sans-serif;
+    font-family: 'Rubik Doodle Shadow', sans-serif;
     font-size: 20px;
     font-weight: 900;
     letter-spacing: .15rem;
+    backdrop-filter: blur(8px);
+}
+
+.dark .nav-icon {
+    filter: invert(1);
 }

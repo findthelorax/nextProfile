@@ -1,0 +1,35 @@
+.contact-form {
+    background: var(--contact-form-bg);
+    color: var(--secondary);
+    box-shadow: 10px 10px 0px var(--secondary);
+    border-radius: 10px;
+}
+
+.contact-form-header {
+    font-family: 'Rubik Doodle Shadow', sans-serif;
+}
+
+.contact-btn {
+    background: var(--contact-btn-bg);
+    color: var(--contact-btn-text);
+    box-shadow: 0px 0px 0 var(--background);
+    border-radius: 5px;
+    font-family: 'Rubik Doodle Shadow', sans-serif;
+}
+
+.contact-btn:hover {
+    box-shadow: 5px 5px 0 var(--background);
+    transform: translateX(-5px) translateY(-5px);
+}
+
+.contact-btn:active {
+    box-shadow: inset 2px 2px 2px var(--secondary), inset -1px -1px 1px var(--secondary), inset 5px 5px 5px var(--background), inset -2px -2px 2px var(--background);
+    border-radius: 5px;
+    transform: translateX(0px) translateY(0px);
+}
+
+.dark .contact-btn:active {
+    box-shadow: inset 5px 5px 5px var(--background), inset -2px -2px 2px var(--background);
+    border-radius: 5px;
+    transform: translateX(0px) translateY(0px);
+}

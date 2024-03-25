@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Bubbler+One&family=Imprima&family=Inter:wght@100..900&family=Kufam:ital,wght@0,400..900;1,400..900&family=Lexend+Deca:wght@100..900&family=Major+Mono+Display&family=Marmelad&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Pompiere&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubbler+One&family=Inter:wght@100..900&family=Major+Mono+Display&family=Marmela&family=Poiret+One&family=Pompierea&family=Rubik+Doodle+Shadow&family=Rubik+Glitch&family=Sixtyfour&display=swap');
+
+@font-face {
+  font-family: 'Nighty';
+  src: url('/assets/Nightydemo.otf') format('opentype');
+}
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
@@ -6,31 +11,113 @@
 
 @import url('navbar.css');
 @import url('footer.css');
-
-.light {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-.dark {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
-}
+@import url('contact.css');
+@import url('email.css');
+@import url('sideSocials.css');
+@import url('skillsScroll.css');
+@import url('contactCircle.css');
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Poiret One', sans-serif;
+  font-weight: 400;
+  color: var(--foreground-rgb);
+  background: var(--background);
 }
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: rgb(230, 230, 230);
+  --background-end-rgb: rgb(230, 230, 230);
+  --background: rgb(230, 230, 230);
+  --background0: rgba(230, 230, 230, 0);
+  --background-rgb: 230, 230, 230;
+  --secondary: rgb(31, 31, 31);
+  --third: rgb(206, 206, 206);
+  --blue: #267293;
+  --text-color: rgb(31, 31, 31);
+  --contact-form-bg: rgb(194, 194, 194);
+  --contact-btn-bg: rgb(31, 31, 31);
+  --contact-btn-text: rgb(194, 194, 194);
+}
+
+:root.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: rgb(0, 48, 47);
+  --background-end-rgb: rgb(0, 48, 47);
+  --background: rgb(0, 48, 47);
+  --background0: rgba(0, 48, 47 0);
+  --background-rgb: 0, 48, 47;
+  --secondary: rgb(230, 230, 230);
+  --third: rgb(0, 79, 77);
+  --blue: #ff4d00;
+  --text-color: rgb(230, 230, 230);
+  --contact-form-bg: rgb(65, 65, 65);
+  --contact-btn-bg: rgb(194, 194, 194);
+  --contact-btn-text: rgb(31, 31, 31);
+}
+
+/* :root.colors {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: rgb(230, 230, 230);
+  --background-end-rgb: rgb(230, 230, 230);
+  --background: rgb(230, 230, 230);
+  --secondary: rgb(31, 31, 31);
+  --text-color: rgb(31, 31, 31);
+  --contact-form-bg: rgb(194, 194, 194);
+  --contact-btn-bg: rgb(31, 31, 31);
+  --contact-btn-text: rgb(194, 194, 194);
+} */
+
+/* [data-theme="dark"] {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: rgb(31, 31, 31);
+  --background-end-rgb: rgb(31, 31, 31);
+  --main: rgb(230, 230, 230);
+  --text-color: rgb(230, 230, 230);
+  --contact-form-bg: rgb(65, 65, 65);
+  --contact-btn-bg: rgb(194, 194, 194);
+  --contact-btn-text: rgb(194, 194, 194);
+} */
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.name-container {
+    display: flex;
+    justify-content: center;
+    text-align: right;
+    font-size: 2em;
+    font-weight: bold;
+    width: max-content;
+    margin: 0 auto;
+    font-family: 'Rubik Doodle Shadow', sans-serif;
+}
+
+.experience-container {
+  height: 85vh;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.small-text {
+  font-size: 12px;
+  text-align: left;
+  margin-left: 25%;
+}
+
+.full-width-line {
+  width: 75%;
+  border: none;
+  border-top: 1px solid var(--secondary);
+  margin: auto;
+}
+
+.large-text {
+  font-size: 24px;
+  text-align: center;
 }

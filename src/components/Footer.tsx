@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
 
     return (
         <footer className={`${resolvedTheme === 'dark' ? 'dark' : ''} text-center pb-4 footer`}>
-            <p>© {year} Brett Ferrante</p>
+            <p>© {year} BRETT FERRANTE</p>
         </footer>
     );
 };

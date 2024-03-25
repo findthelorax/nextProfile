@@ -1,0 +1,79 @@
+.scroll {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin-top: -100px;
+    width: 75%;
+}
+
+.scroll::before,
+.scroll::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    background: linear-gradient(to right, rgba(var(--background-rgb), 1), rgba(var(--background-rgb), 0));
+    z-index: 2;
+}
+
+.scroll::after {
+    right: 0;
+    transform: scaleX(-1);
+}
+
+.scroll .scrolling {
+    white-space: nowrap;
+}
+
+.scrolling span {
+    display: inline-flex;
+    align-items: center;
+    margin: 10px;
+    letter-spacing: 0.2em;
+    background: var(--third);
+    color: var(--text-color);
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.skills-card-div {
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+}
+
+.skills-card-span:hover,
+.skills-card-span:hover .skills-text {
+    background-color: var(--blue);
+    color: var(--text-color);
+}
+
+.skills-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex: 1;
+}
+
+.skills-text {
+    margin-left: 5px;
+    white-space: nowrap;
+}
+
+.scrolling {
+    display: flex;
+    animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

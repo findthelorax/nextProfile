@@ -1,0 +1,128 @@
+.socials-container {
+    position: fixed;
+    left: 0;
+    top: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.rotated-text {
+    font-family: 'Rubik Doodle Shadow', sans-serif;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 1.5em;
+    font-weight: 900;
+    margin-left: -5px;
+}
+
+.line-and-text {
+    position: relative;
+    height: 200px;
+}
+
+.vertical-line, .rotated-text {
+    position: absolute;
+    bottom: 0;
+}
+
+.vertical-line {
+    width: 2px;
+    margin-left: 12.4px;
+    height: 90%;
+    background-color:  var(--secondary);
+}
+
+.arrow-head {
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 175px;
+    margin-left: 3px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid var(--secondary);
+}
+
+.icons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.icon-circle a:hover {
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation: pendulum 1.5s ease-in-out infinite both;
+}
+
+@keyframes pendulum {
+    0% {
+        transform: rotate(0deg) scale(1.2);
+    }
+
+    20% {
+        transform: rotate(-20deg) scale(1.2);
+    }
+
+    40% {
+        transform: rotate(20deg) scale(1.2);
+    }
+
+    60% {
+        transform: rotate(-20deg) scale(1.2);
+    }
+
+    80% {
+        transform: rotate(20deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1.2);
+    }
+}
+
+
+
+/* @keyframes float1 {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(-25px, -50px); }
+    50% { transform: translate(5px, -175px); }
+    75% { transform: translate(50px, -200px); }
+}
+
+@keyframes float2 {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(25px, -25px); }
+    50% { transform: translate(0, -140px); }
+    75% { transform: translate(-50px, 20px); }
+}
+
+@keyframes float3 {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(-25px, -75px); }
+    50% { transform: translate(50px, -175px); }
+    75% { transform: translate(0, -225px); }
+} */
+
+/* .icon-circle:nth-child(1) {
+    animation: float1 12s ease-in-out infinite;
+}
+
+.icon-circle:nth-child(2) {
+    animation: float2 25s ease-in-out infinite;
+}
+
+.icon-circle:nth-child(3) {
+    animation: float3 20s ease-in-out infinite;
+} */
