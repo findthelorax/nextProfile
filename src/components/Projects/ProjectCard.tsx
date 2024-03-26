@@ -8,7 +8,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, languages }) => {
     return (
-        <div className="max-w-screen-md mx-auto m-6 rounded shadow-lg bg-cyan-600">
+        <div className="max-w-screen-md mx-auto m-6 rounded shadow-lg project-card">
             <div className="px-6 py-4">
                 <div className="font-bold text-center text-xl mb-2">{title}</div>
                 <p className="text-black text-base">{description}</p>

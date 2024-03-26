@@ -13,6 +13,7 @@
 @import url('footer.css');
 @import url('contact.css');
 @import url('email.css');
+@import url('projects.css');
 @import url('sideSocials.css');
 @import url('skillsScroll.css');
 @import url('contactCircle.css');
@@ -49,6 +50,7 @@ body {
   --background-rgb: 0, 48, 47;
   --secondary: rgb(230, 230, 230);
   --third: rgb(0, 79, 77);
+  --fourth: rgba(255, 255, 255, 0.46);
   --blue: #ff4d00;
   --text-color: rgb(230, 230, 230);
   --contact-form-bg: rgb(65, 65, 65);
@@ -86,14 +88,15 @@ body {
 }
 
 .name-container {
-    display: flex;
-    justify-content: center;
-    text-align: right;
-    font-size: 2em;
-    font-weight: bold;
-    width: max-content;
-    margin: 0 auto;
-    font-family: 'Rubik Doodle Shadow', sans-serif;
+  font-family: 'Rubik Doodle Shadow', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+  display: flex;
+  justify-content: center;
+  text-align: right;
+  width: max-content;
+  margin: 0 auto;
 }
 
 .experience-container {

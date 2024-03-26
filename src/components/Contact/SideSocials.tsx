@@ -19,6 +19,8 @@ const SideSocials = () => {
 
     return (
         <div className="socials-container">
+                        <h1 className="text-4xl pl-6">BF</h1>
+
             <div className="icons-container pl-6">
                 {socials.map(({ Icon, link, color }, index) => (
                     <animated.div key={index} className="icon-circle pb-3" style={springs[index]}>

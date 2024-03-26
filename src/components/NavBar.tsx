@@ -1,20 +1,42 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useTheme } from 'next-themes';
-import { PiSunHorizonDuotone, PiMoonStarsDuotone, PiRainbowDuotone } from "react-icons/pi";
+import { PiSunHorizonDuotone, PiMoonStarsDuotone } from "react-icons/pi";
+import { useSpring, animated } from 'react-spring';
+import { useWindowScroll } from 'react-use';
 
 export default function Navbar() {
     const { resolvedTheme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
+    const { y } = useWindowScroll();
+    const prevScrollPos = useRef(0);
+    const [visible, setVisible] = useState(true);
 
-    // After mounting, we have access to the theme
-    useEffect(() => setMounted(true), []);
+    const fade = useSpring({
+        opacity: visible ? 1 : 0,
+        backdropFilter: visible ? 'blur(5px)' : 'blur(0px)',
+        from: { opacity: 1, backdropFilter: 'blur(0px)' },
+    });
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = y;
+            const visible = prevScrollPos.current > currentScrollPos;
+            setVisible(visible);
+            prevScrollPos.current = currentScrollPos;
+        };
+        handleScroll();
+    }, [y]);
 
     if (!mounted) {
         return null;
     }
 
     return (
-        <div className="sticky top-0 z-50 nav-container">
+        <animated.div style={fade} className="sticky top-0 z-50 nav-container relative bg-transparent">
             <nav className="flex items-center justify-center p-4 mx-auto navbar">
                 <div className="space-x-4">
                     <a href="/">HOME</a>
@@ -26,6 +48,6 @@ export default function Navbar() {
                     </button>
                 </div>
             </nav>
-        </div>
+        </animated.div>
     );
 }

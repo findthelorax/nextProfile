@@ -24,7 +24,7 @@ const projects = [
         title: 'DXDrone',
         description: 'Drone photography, mapping, and surverying website for a client. It is a single page application that allows users to view and purchase drone services. The website is built with Next.js and Tailwind CSS.',
         languages: ['Typescript', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
-        image: '/assets/dm1.png',
+        image: '/assets/dks1.png',
         imageClass: 'w-60 h-100',
     },
     {

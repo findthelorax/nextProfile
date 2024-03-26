@@ -41,6 +41,11 @@ const parallaxDataStackDeveloper = [
                 endValue: -400,
                 property: 'translateY',
             },
+            {
+                startValue: 0,
+                endValue: 50,
+                property: 'translateX',
+            },
         ],
     },
 ];
@@ -67,7 +72,7 @@ const Name = () => {
         from: { transform: 'translateX(200px)' },
         config: { tension: 15, friction: 5 }
     });
-    const propsStackDeveloper = useSpring({ transform: loadAnimation ? 'translateY(0px)' : 'translateY(-300px)', from: { transform: 'translateY(-300px)' }, config: { tension: 20, friction: 5 } });
+    const propsStackDeveloper = useSpring({ transform: loadAnimation ? 'translateY(0px) translateX(50px)' : 'translateY(-300px) translateX(50px)', from: { transform: 'translateY(-300px) translateX(50px)' }, config: { tension: 20, friction: 5 } });
 
     useEffect(() => {
         setLoadAnimation(true);
